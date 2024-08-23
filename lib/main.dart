@@ -1,5 +1,8 @@
+//import 'package:ecomapp/features/authentication/screens/onboarding/onBoarding.dart';
 import 'package:ecomapp/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ecomapp/features/authentication/screens.onboarding/onBoarding.dart';
 
 void main() {
   //Todo: Add Widget BINDING
@@ -16,17 +19,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // themeMode: ThemeMode.system,
-      // theme: TAppTheme.lightTheme= ThemeData(
-      //   useMaterial3: true,
-      //   fontFamily: 'Poppins',
-      //   brightness: Brightness.light,
-      //   primaryColor: Colors.blue,
-      //   scaffoldBackgroundColor: Colors.white,
-      //   textTheme: TextTheme(),
-      // ),
-      // darkTheme: TAppTheme.darkTheme,
+    return GetMaterialApp(
+      themeMode: ThemeMode.system,
+      theme: TAppTheme.lightTheme= ThemeData(
+        useMaterial3: true,
+        fontFamily: 'Poppins',
+        brightness: Brightness.light,
+        primaryColor: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+        textTheme: TextTheme(),
+      ),
+      darkTheme: TAppTheme.darkTheme,
+      home: const OnBoardingScreen(),
     );
   }
 }
